@@ -1,0 +1,5 @@
+
+SELECT COUNT (c.login) FROM "Couriers" AS c INNER JOIN "Orders" AS o ON "courierId" = c.id WHERE o."inDelivery" = true;
+
+SELECT track, CASE WHEN “inDelivery” = true THEN 1 WHEN canсelled = true THEN -1 WHEN finished = true THEN 2 ELSE 0 END AS status FROM “Orders”;
+
